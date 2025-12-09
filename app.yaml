@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: helloworld-k8s
-        image: paulbouwer/hello-kubernetes
+        image: "paulbouwer/hello-kubernetes:1.10"
         ports:
         - containerPort: 8080
         resources:
