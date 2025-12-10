@@ -37,6 +37,6 @@ spec:
     app: helloworld-k8s
   ports:
     - name: http
-      port: 80
+      port: 83
       targetPort: 8080
 
