@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: manibhas
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: manibhas
+  template:
+    metadata:
+      labels:
+        app: manibhas
+    spec:
+      containers:
+      - name: manibhas
+        image: manibhas:latest
+        ports:
+        - containerPort: 80
