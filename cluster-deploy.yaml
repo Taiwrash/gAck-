@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: cluster
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: cluster
+  template:
+    metadata:
+      labels:
+        app: cluster
+    spec:
+      containers:
+      - name: cluster
+        image: nginx:latest
+        ports:
+        - containerPort: 80
