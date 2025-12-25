@@ -36,6 +36,7 @@ jobs:
       - name: Import state
         run: |
           terraform import aws_iam_openid_connect_provider.this arn:aws:iam::985539786063:oidc-provider/token.actions.githubusercontent.com
-          
+          terraform import aws_iam_policy.deploy arn:aws:iam::985539786063:policy/ci-deploy-policy
+  
       - name: Terraform Apply
         run: terraform apply -auto-approve
