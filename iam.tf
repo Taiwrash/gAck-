@@ -5,7 +5,8 @@ resource "aws_iam_openid_connect_provider" "this" {
     "sts.amazonaws.com",
   ]
 
-  thumbprint_list = ["ffffffffffffffffffffffffffffffffffffffff"]
+ thumbprint_list = ["6938fd4d98bab03faadb97b34396831e3780aea1"]
+
 }
 
 
@@ -32,10 +33,10 @@ data "aws_iam_policy_document" "oidc" {
   }
 }
 
-resource "aws_iam_role" "this" {
-  name               = "github_oidc_role"
-  assume_role_policy = data.aws_iam_policy_document.oidc.json
-}
+# resource "aws_iam_role" "this" {
+#   name               = "github_oidc_role"
+#   assume_role_policy = data.aws_iam_policy_document.oidc.json
+# }
 
 data "aws_iam_policy_document" "deploy" {
   statement {
