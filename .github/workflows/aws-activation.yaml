@@ -29,13 +29,13 @@ jobs:
           sudo apt update
           sudo apt install -y terraform
 
-      - name: Import state
-        run: |
-          terraform import aws_iam_openid_connect_provider.this arn:aws:iam::985539786063:oidc-provider/token.actions.githubusercontent.com
-
 
       - name: Terraform Init
         run: terraform init
 
+      - name: Import state
+        run: |
+          terraform import aws_iam_openid_connect_provider.this arn:aws:iam::985539786063:oidc-provider/token.actions.githubusercontent.com
+          
       - name: Terraform Apply
         run: terraform apply -auto-approve
