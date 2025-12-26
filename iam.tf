@@ -33,10 +33,10 @@ data "aws_iam_policy_document" "oidc" {
   }
 }
 
-# resource "aws_iam_role" "this" {
-#   name               = "github_oidc_role"
-#   assume_role_policy = data.aws_iam_policy_document.oidc.json
-# }
+resource "aws_iam_role" "this" {
+  name               = "github_oidc_role"
+  assume_role_policy = data.aws_iam_policy_document.oidc.json
+}
 
 data "aws_iam_policy_document" "deploy" {
   statement {
