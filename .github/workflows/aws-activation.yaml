@@ -37,7 +37,7 @@ jobs:
         run: |
           terraform import aws_iam_openid_connect_provider.this arn:aws:iam::985539786063:oidc-provider/token.actions.githubusercontent.com
           terraform import aws_iam_policy.deploy arn:aws:iam::985539786063:policy/ci-deploy-policy
-          terraform import aws_iam_role.this arn:aws:iam::985539786063:role/this
+          terraform import aws_iam_role.this arn:aws:iam::985539786063:role/github_oidc_role
   
       - name: Terraform Apply
         run: terraform apply -auto-approve
