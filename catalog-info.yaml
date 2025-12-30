@@ -3,7 +3,8 @@ kind: Component
 metadata:
   name: gAck-
   annotations:
-    github.com/project-slug: taiwrash/gAck-
+    github.com/project-slug: Taiwrash/gAck-
 spec:
-  type: other
-  lifecycle: unknown
+  type: service
+  owner: development
+  lifecycle: experimental
