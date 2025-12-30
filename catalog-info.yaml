@@ -1,0 +1,9 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: gAck-
+  annotations:
+    github.com/project-slug: taiwrash/gAck-
+spec:
+  type: other
+  lifecycle: unknown
